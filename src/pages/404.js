@@ -1,8 +1,8 @@
-import React from "react"
-import Layout from "../components/Layout"
-import Head from "../components/Head"
-import Typewriter from "../components/Typewriter"
-import Footer from "../components/Footer"
+import React from 'react';
+import Layout from '../components/Layout';
+import Head from '../components/Head';
+import Typewriter from '../components/Typewriter';
+import Footer from '../components/sections/Footer';
 const NotFoundPage = () => (
   <Layout>
     <Head title="Not found" />
@@ -13,6 +13,6 @@ const NotFoundPage = () => (
       </div>
     </div>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

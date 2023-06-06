@@ -1,18 +1,18 @@
 'use client';
+import '../styles/index.scss';
 import { throttle } from 'lodash';
 import { useEffect, useState } from 'react';
-import About from '../components/About';
-import Footer from '../components/Footer';
+import About from '../components/sections/About';
+import Featured from '../components/sections/Featured';
+import Footer from '../components/sections/Footer';
 import Head from '../components/Head';
-import Hero from '../components/Hero';
+import Hero from '../components/sections/Hero';
 import Layout from '../components/Layout';
 import Links from '../components/Links';
 import Navbar from '../components/Navbar';
-import Projects from '../components/Projects';
+import Projects from '../components/sections/Projects';
 import React from 'react';
 import statements from '../content/summary';
-
-import '../styles/index.scss';
 
 // ABOUT ARTICLES CONTACT PROJECTS
 export default () => {
@@ -30,18 +30,14 @@ export default () => {
     <Layout>
       <Head title="Home" />
       <Navbar />
-
-      <Footer />
+      <div id="content">
+        <Hero />
+        <About />
+        <Featured />
+        {/* <Projects /> */}
+        <Links />
+        <Footer />
+      </div>
     </Layout>
   );
 };
-//  <Hero />
-//     <About statements={statements} />
-//     <h2 id="projects" className="section-title">
-//       Projects
-//     </h2>
-//     <Projects />
-//     <h2 id="contact" className="section-title">
-//       Contact me!
-//     </h2>
-//     <Links />

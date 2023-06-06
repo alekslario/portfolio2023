@@ -1,30 +1,49 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import smoothScroll from '../util/smoothScroll';
+import useScrollDirection from '../hooks/useScrollDirection';
+import { IconHexagonLetterA } from '@tabler/icons-react';
+import Menu from './Menu';
+import config from '../config';
 import $ from './Navbar.module.scss';
+
 const Navbar = () => {
-  const handleClick = (e) => {
-    e.preventDefault();
-    const id = e.target.name;
-    smoothScroll(id);
-  };
+  const scrollDirection = useScrollDirection();
+  const [scrolledToTop, setScrolledToTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolledToTop(window.pageYOffset < 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={$.container}>
-      <nav className={$.navbar}>
-        <button name="about" onClick={handleClick}>
-          About
-        </button>
-        <button name="projects" onClick={handleClick}>
-          Projects
-        </button>
-        <button name="contact" onClick={handleClick}>
-          Contact
-        </button>
-        <button name="articles" onClick={handleClick}>
-          Articles
-        </button>
+    <header
+      className={`${$.container} ${scrolledToTop ? '' : scrollDirection === 'down' ? $.scrollingDown : $.scrollingUp}`}
+    >
+      <nav>
+        <a href="/" className={$.logoContainer}>
+          <IconHexagonLetterA />
+        </a>
+        <div className={$.links}>
+          <ol>
+            {config.navLinks.map(({ name, url }) => (
+              <li>
+                <a href={url}>{name}</a>
+              </li>
+            ))}
+          </ol>
+          <a className={$.resume} href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
+        </div>
+        <Menu />
       </nav>
-    </div>
+    </header>
   );
 };
 export default Navbar;

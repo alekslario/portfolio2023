@@ -2,10 +2,10 @@ import React from 'react';
 import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
 import $ from './Projects.module.scss';
 import Image from 'next/image';
-import projects from '../content/projects.json';
-console.log('projects', projects);
+import projects from '../../content/projects.json';
+
 const Projects = () => (
-  <div className={$.projects_container}>
+  <section className={$.container}>
     {projects.map(({ title, description, skills, links: { preview, github }, image }) => (
       <div key={title} className={$.project_card}>
         <Image src={image} alt="Picture of project" width={1000} height={1000} className={$.project_image_wrapper} />
@@ -34,7 +34,7 @@ const Projects = () => (
         </div>
       </div>
     ))}
-  </div>
+  </section>
 );
 
 export default Projects;
