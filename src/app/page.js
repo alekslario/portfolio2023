@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import About from '../components/sections/About';
 import Featured from '../components/sections/Featured';
 import Footer from '../components/sections/Footer';
-import Head from '../components/Head';
+
 import Hero from '../components/sections/Hero';
 import Layout from '../components/Layout';
 import Links from '../components/Links';
@@ -28,7 +28,6 @@ export default () => {
   }, []);
   return (
     <Layout>
-      <Head title="Home" />
       <Navbar />
       <div id="content">
         <Hero />
