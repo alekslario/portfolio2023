@@ -1,40 +1,66 @@
-import React from 'react';
-import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
+import React, { useState } from 'react';
+import { IconBrandGithub, IconExternalLink, IconFolder } from '@tabler/icons-react';
 import $ from './Projects.module.scss';
-import Image from 'next/image';
-import projects from '../../content/projects.json';
+import config from '../../config';
 
-const Projects = () => (
-  <section className={$.container}>
-    {projects.map(({ title, description, skills, links: { preview, github }, image }) => (
-      <div key={title} className={$.project_card}>
-        <Image src={image} alt="Picture of project" width={1000} height={1000} className={$.project_image_wrapper} />
-        <div className={$.project_content}>
-          <h3>{title}</h3>
-          <p dangerouslySetInnerHTML={{ __html: description }} />
-          {
-            <div className={$.project_skills}>
-              {skills.map((skill, index) => {
-                return (
-                  <span key={index} className={$.project_skill}>
-                    {skill}
-                  </span>
-                );
-              })}
+const Projects = () => {
+  const [showMore, setShowMore] = useState(false);
+
+  return (
+    <section className={$.container} id="projects">
+      <h2>Other Noteworthy Projects</h2>
+      <ul className={$.projectsGrid}>
+        {config.projects.map(({ description, title, tech, external, github }, i) => (
+          <li className={$.project}>
+            <div className={$.projectInner}>
+              <header>
+                <div className={$.projectTop}>
+                  <div className="folder">
+                    remvoe or not
+                    <IconFolder />
+                  </div>
+                  <div className={$.projectLinks}>
+                    {github && (
+                      <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
+                        <IconBrandGithub />
+                      </a>
+                    )}
+                    {external && (
+                      <a href={external} aria-label="External Link" className="external" target="_blank" rel="noreferrer">
+                        <IconExternalLink />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <h3 className={$.projectTitle}>
+                  <a href={external} target="_blank" rel="noreferrer">
+                    {title}
+                  </a>
+                </h3>
+
+                <div className={$.projectDescription} dangerouslySetInnerHTML={{ __html: description }} />
+              </header>
+
+              <footer>
+                {tech && (
+                  <ul className=${$.projectTechList}>
+                    {tech.map((tech, i) => (
+                      <li key={i}>{tech}</li>
+                    ))}
+                  </ul>
+                )}
+              </footer>
             </div>
-          }
-          <div className={$.project_links}>
-            <a href={preview} rel="noopener noreferrer" target="_blank" className={$.project_link}>
-              Live Demo <IconExternalLink />
-            </a>
-            <a href={github} rel="noopener noreferrer" target="_blank" className={`${$.project_link} ${$.secondary}`}>
-              <IconBrandGithub /> View Source
-            </a>
-          </div>
-        </div>
-      </div>
-    ))}
-  </section>
-);
+          </li>
+        ))}
+      </ul>
+
+      <button className={$.moreButton} onClick={() => setShowMore((prev) => !prev)}>
+        Show {showMore ? 'Less' : 'More'}
+      </button>
+    </section>
+  );
+};
 
 export default Projects;
