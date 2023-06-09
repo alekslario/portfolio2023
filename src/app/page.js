@@ -2,19 +2,19 @@
 import '../styles/index.scss';
 import { throttle } from 'lodash';
 import { useEffect, useState } from 'react';
-import About from '../components/sections/About';
-import Featured from '../components/sections/Featured';
-import Footer from '../components/sections/Footer';
-
-import Hero from '../components/sections/Hero';
-import Layout from '../components/Layout';
-import Links from '../components/Links';
-import Navbar from '../components/Navbar';
-import Projects from '../components/sections/Projects';
+import About from '@/components/sections/About';
+import Featured from '@/components/sections/Featured';
+import Footer from '@/components/Footer';
+import Contact from '@/components/sections/Contact';
+import Hero from '@/components/sections/Hero';
+import Layout from '@/components/Layout';
+import Navbar from '@/components/Navbar';
+import Projects from '@/components/sections/Projects';
+import Articles from '@/components/sections/Articles';
+import Email from '@/components/Email';
+import Social from '@/components/Social';
 import React from 'react';
-import statements from '../content/summary';
 
-// ABOUT ARTICLES CONTACT PROJECTS
 export default () => {
   const [state, setState] = useState('ABOUT');
   useEffect(() => {
@@ -29,14 +29,17 @@ export default () => {
   return (
     <Layout>
       <Navbar />
-      <div id="content">
+      <Social />
+      <Email />
+      <main id="content">
         <Hero />
         <About />
         <Featured />
-        {/* <Projects /> */}
-        <Links />
-        <Footer />
-      </div>
+        <Projects />
+        <Articles />
+        <Contact />
+      </main>
+      <Footer />
     </Layout>
   );
 };

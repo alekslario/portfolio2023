@@ -1,4 +1,27 @@
+import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 export default {
+  email: 'alex@aleksandrslarionovs.com',
+
+  socialMedia: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/alekslario',
+      Icon: IconBrandGithub,
+    },
+    // {
+    //   name: 'Instagram',
+    //   url: 'https://www.instagram.com/bchiang7',
+    // },
+    // {
+    //   name: 'Twitter',
+    //   url: 'https://twitter.com/bchiang7',
+    // },
+    {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/aleksandrs-larionovs/',
+      Icon: IconBrandLinkedin,
+    },
+  ],
   navLinks: [
     {
       name: 'About',
@@ -92,6 +115,51 @@ export default {
       github: 'https://github.com/alekslario/algofind',
       external: 'https://reliable-smakager-49c4c6.netlify.app/',
       cta: '',
+    },
+    {
+      title: 'Yet another algorithm visualizer.',
+      description:
+        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
+      cover: '/../public/images/algofind.png',
+      tech: ['React', 'Tailwind', 'Styled Components'],
+      github: 'https://github.com/alekslario/algofind',
+      external: 'https://reliable-smakager-49c4c6.netlify.app/',
+      cta: '',
+    },
+    {
+      title: 'Yet another algorithm visualizer.',
+      description:
+        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
+      cover: '/../public/images/algofind.png',
+      tech: ['React', 'Tailwind', 'Styled Components'],
+      github: 'https://github.com/alekslario/algofind',
+      external: 'https://reliable-smakager-49c4c6.netlify.app/',
+      cta: '',
+    },
+    {
+      title: 'Yet another algorithm visualizer.',
+      description:
+        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
+      cover: '/../public/images/algofind.png',
+      tech: ['React', 'Tailwind', 'Styled Components'],
+      github: 'https://github.com/alekslario/algofind',
+      external: 'https://reliable-smakager-49c4c6.netlify.app/',
+      cta: '',
+    },
+  ],
+  articles: [
+    {
+      title: 'The Art of AI: Using ChatGPT and Midjourney to Generate Inspiring Visuals.',
+      description: 'Exploring the beauty of randomness.',
+      cover: '/../public/images/1article.png',
+      external:
+        'https://medium.com/@aleksandlario/the-art-of-ai-using-chatgpt-and-midjourney-to-generate-inspiring-visuals-caa91012c8db',
+    },
+    {
+      title: 'How to Automate Midjourney Image Generation with Puppeteer.',
+      description: 'Web scraping Discord.',
+      cover: '/../public/images/2article.png',
+      external: 'https://medium.com/@aleksandlario/how-to-automate-midjourney-image-generation-with-puppeteer-6aea1b366c75',
     },
   ],
 };

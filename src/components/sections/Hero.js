@@ -1,14 +1,13 @@
 'use client';
 import React from 'react';
-import scrollTo from '../../util/smoothScroll';
 import $ from './Hero.module.scss';
 const Hero = () => (
-  <div className={$.container}>
+  <section className={$.container}>
     <h1>Hi, my name is</h1>
     <h2>Aleksandrs Larionovs.</h2>
     <h3>I build things for web and beyond.</h3>
     <p>
-      I am a software engineer specializing in building fast, responsive web apps . Currently, I am a student at the
+      I am a software engineer specializing in building fast, responsive web apps. Currently, I am a student at the
       University of London.
     </p>
     <a
@@ -18,7 +17,7 @@ const Hero = () => (
     >
       Check out my articles!
     </a>
-  </div>
+  </section>
 );
 
 export default Hero;

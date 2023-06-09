@@ -5,18 +5,17 @@ import config from '../../config';
 
 const Projects = () => {
   const [showMore, setShowMore] = useState(false);
-
+  const projects = showMore ? config.projects.slice(0, 6) : config.projects.slice(0, 3);
   return (
-    <section className={$.container} id="projects">
+    <section className={$.container}>
       <h2>Other Noteworthy Projects</h2>
       <ul className={$.projectsGrid}>
-        {config.projects.map(({ description, title, tech, external, github }, i) => (
+        {projects.map(({ description, title, tech, external, github }, i) => (
           <li className={$.project}>
             <div className={$.projectInner}>
               <header>
                 <div className={$.projectTop}>
                   <div className="folder">
-                    remvoe or not
                     <IconFolder />
                   </div>
                   <div className={$.projectLinks}>
@@ -44,7 +43,7 @@ const Projects = () => {
 
               <footer>
                 {tech && (
-                  <ul className=${$.projectTechList}>
+                  <ul className={$.projectTechList}>
                     {tech.map((tech, i) => (
                       <li key={i}>{tech}</li>
                     ))}

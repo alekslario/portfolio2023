@@ -1,4 +1,4 @@
-// import { Inter } from 'next/font/google';
+import { Roboto_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -17,23 +17,34 @@ const calibre = localFont({
     {
       path: '../../public/fonts/Calibre-Regular.woff2',
       weight: '400',
+      style: 'normal',
     },
     {
       path: '../../public/fonts/Calibre-Medium.woff2',
       weight: '500',
+      style: 'normal',
     },
     {
       path: '../../public/fonts/Calibre-Semibold.woff2',
       weight: '600',
+      style: 'normal',
     },
   ],
-  variable: '--font-calibre',
+  variable: '--calibre',
 });
+
+const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  style: ['normal'],
+  display: 'swap',
+  variable: '--roboto-mono',
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={calibre.variable}>{children}</body>
+    <html lang="en" className={calibre.variable + ' ' + roboto_mono.variable}>
+      <body>{children}</body>
     </html>
   );
 }

@@ -4,7 +4,7 @@ import $ from './Featured.module.scss';
 import Image from 'next/image';
 import config from '../../config';
 
-const Projects = () => (
+const Featured = () => (
   <section id="projects" className={$.container}>
     <h2 className="numbered-heading">Some Things I’ve Built</h2>
 
@@ -58,4 +58,4 @@ const Projects = () => (
   </section>
 );
 
-export default Projects;
+export default Featured;

@@ -1,0 +1,36 @@
+@import '../styles/_mixins';
+.footer {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xxs);
+  line-height: 1;
+
+  ///
+
+  ul {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 270px;
+      margin: 0 auto 10px;
+      color: var(--light-slate);
+    }
+    @extend .flexBetween;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    a {
+      padding: 10px;
+      svg {
+        fill: none;
+      }
+    }
+  }
+}

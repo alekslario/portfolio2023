@@ -26,9 +26,8 @@
   --pink: #f57dff;
   --blue: #57cbff;
 
-  --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-  --font-mono: 'Domine', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-
+  --font-sans: var(--calibre), 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+  --font-mono: var(--roboto-mono), 'Fira Code', 'Fira Mono', monospace;
   --fz-xxs: 12px;
   --fz-xs: 13px;
   --fz-sm: 14px;

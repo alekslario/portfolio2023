@@ -1,0 +1,28 @@
+@import '../styles/_mixins';
+.container {
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 40px;
+  z-index: 10;
+  color: var(--light-slate);
+
+  @media (max-width: 1080px) {
+    left: auto;
+    right: '20px';
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.left_side {
+  left: 40px;
+  right: auto;
+  @media (max-width: 1080px) {
+    left: 20px;
+    right: auto;
+  }
+}

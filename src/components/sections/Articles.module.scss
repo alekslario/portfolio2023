@@ -1,0 +1,6 @@
+@import '../../styles/mixins.scss';
+.container {
+  ul {
+    @extend .resetList;
+  }
+}
