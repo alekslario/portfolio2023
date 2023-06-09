@@ -208,7 +208,7 @@
     position: relative;
     bottom: 4px;
     counter-increment: section;
-    content: '0' counter(section) '.';
+    content: '0' counter(count) '.';
     margin-right: 10px;
     color: var(--green);
     font-family: var(--font-mono);
@@ -241,4 +241,11 @@
       margin-left: 10px;
     }
   }
+}
+
+.overline {
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--fz-md);
+  font-weight: 400;
 }

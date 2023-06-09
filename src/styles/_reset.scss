@@ -134,6 +134,7 @@ body {
 // }
 
 section {
+  counter-increment: count;
   margin: 0 auto;
   padding: 100px 0;
   max-width: 1000px;
@@ -319,13 +320,6 @@ code {
 
 #logo {
   color: var(--green);
-}
-
-.overline {
-  color: var(--green);
-  font-family: var(--font-mono);
-  font-size: var(--fz-md);
-  font-weight: 400;
 }
 
 .subtitle {

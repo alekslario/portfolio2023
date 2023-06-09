@@ -1,6 +1,7 @@
 @import '../../styles/mixins.scss';
 .container {
   max-width: 900px;
+  counter-reset: count;
 
   & > div {
     display: grid;

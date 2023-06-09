@@ -113,10 +113,8 @@
 
     .projectOverline {
       margin: 10px 0;
-      color: var(--green);
-      font-family: var(--font-mono);
+      @extend .overline;
       font-size: var(--fz-xs);
-      font-weight: 400;
     }
 
     .projectTitle {
