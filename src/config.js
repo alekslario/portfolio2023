@@ -77,73 +77,19 @@ export default {
   ],
   projects: [
     {
-      title: 'Yet another algorithm visualizer.',
-      description:
-        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
-      cover: '/../public/images/algofind.png',
-      tech: ['React', 'Tailwind', 'Styled Components'],
-      github: 'https://github.com/alekslario/algofind',
-      external: 'https://reliable-smakager-49c4c6.netlify.app/',
+      title: 'Firestore-size',
+      description: 'This npm package calculates the approximate size (in bytes) of a Firestore document.',
+      tech: ['JS'],
+      github: 'https://github.com/alekslario/firestore-size',
+      external: 'https://www.npmjs.com/package/firestore-size',
       cta: '',
     },
     {
-      title: 'Yet another algorithm visualizer.',
-      description:
-        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
-      cover: '/../public/images/algofind.png',
-      tech: ['React', 'Tailwind', 'Styled Components'],
-      github: 'https://github.com/alekslario/algofind',
-      external: 'https://reliable-smakager-49c4c6.netlify.app/',
-      cta: '',
-    },
-    {
-      title: 'Yet another algorithm visualizer.',
-      description:
-        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
-      cover: '/../public/images/algofind.png',
-      tech: ['React', 'Tailwind', 'Styled Components'],
-      github: 'https://github.com/alekslario/algofind',
-      external: 'https://reliable-smakager-49c4c6.netlify.app/',
-      cta: '',
-    },
-    {
-      title: 'Yet another algorithm visualizer.',
-      description:
-        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
-      cover: '/../public/images/algofind.png',
-      tech: ['React', 'Tailwind', 'Styled Components'],
-      github: 'https://github.com/alekslario/algofind',
-      external: 'https://reliable-smakager-49c4c6.netlify.app/',
-      cta: '',
-    },
-    {
-      title: 'Yet another algorithm visualizer.',
-      description:
-        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
-      cover: '/../public/images/algofind.png',
-      tech: ['React', 'Tailwind', 'Styled Components'],
-      github: 'https://github.com/alekslario/algofind',
-      external: 'https://reliable-smakager-49c4c6.netlify.app/',
-      cta: '',
-    },
-    {
-      title: 'Yet another algorithm visualizer.',
-      description:
-        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
-      cover: '/../public/images/algofind.png',
-      tech: ['React', 'Tailwind', 'Styled Components'],
-      github: 'https://github.com/alekslario/algofind',
-      external: 'https://reliable-smakager-49c4c6.netlify.app/',
-      cta: '',
-    },
-    {
-      title: 'Yet another algorithm visualizer.',
-      description:
-        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
-      cover: '/../public/images/algofind.png',
-      tech: ['React', 'Tailwind', 'Styled Components'],
-      github: 'https://github.com/alekslario/algofind',
-      external: 'https://reliable-smakager-49c4c6.netlify.app/',
+      title: 'gatsby-plugin-google-fonts-with-attributes',
+      description: 'This Gatsby plugin loads Google Fonts.',
+      tech: ['JS, Gatsby'],
+      github: 'https://github.com/alekslario/gatsby-plugin-google-fonts-with-attributes',
+      external: 'https://www.npmjs.com/package/gatsby-plugin-google-fonts-with-attributes',
       cta: '',
     },
   ],
