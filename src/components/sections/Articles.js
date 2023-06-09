@@ -10,11 +10,16 @@ const Articles = () => {
       <ul>
         {config.articles.map(({ title, description, cover, external }, i) => (
           <li key={i}>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <a href={external} aria-label="External Link" className="external">
-              <IconExternalLink />
-            </a>
+            <div className={$.imageWrapper}>
+              <Image src={cover} alt={title} fill={true} />
+            </div>
+            <div className={$.content}>
+              <h4>{title}</h4>
+              <p>{description}</p>
+              {/* <a href={external} aria-label="External Link" className="external">
+                <IconExternalLink />
+              </a> */}
+            </div>
           </li>
         ))}
       </ul>

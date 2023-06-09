@@ -161,5 +161,11 @@ export default {
       cover: '/../public/images/2article.png',
       external: 'https://medium.com/@aleksandlario/how-to-automate-midjourney-image-generation-with-puppeteer-6aea1b366c75',
     },
+    {
+      title: 'How to Automate Midjourney Image Generation with Puppeteer.',
+      description: 'Web scraping Discord.',
+      cover: '/../public/images/2article.png',
+      external: 'https://medium.com/@aleksandlario/how-to-automate-midjourney-image-generation-with-puppeteer-6aea1b366c75',
+    },
   ],
 };
