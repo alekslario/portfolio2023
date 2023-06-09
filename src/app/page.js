@@ -31,7 +31,7 @@ export default () => {
       <Navbar />
       <Social />
       <Email />
-      <main id="content">
+      <main id="content" className="fillHeight">
         <Hero />
         <About />
         <Featured />

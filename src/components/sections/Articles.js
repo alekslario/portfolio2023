@@ -14,7 +14,11 @@ const Articles = () => {
               <Image src={cover} alt={title} fill={true} />
             </div>
             <div className={$.content}>
-              <h4>{title}</h4>
+              <h3 className={$.projectTitle}>
+                <a href={external} target="_blank" rel="noreferrer">
+                  {title}
+                </a>
+              </h3>
               <p>{description}</p>
               <a href={external} aria-label="External Link" className={$.link}>
                 <IconExternalLink />
