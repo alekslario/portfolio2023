@@ -1,5 +1,6 @@
 @import '../../styles/mixins.scss';
 .container {
+  counter-increment: count 0;
   display: flex;
   flex-direction: column;
   align-items: center;

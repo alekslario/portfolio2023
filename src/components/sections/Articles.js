@@ -5,7 +5,7 @@ import config from '../../config';
 const Articles = () => {
   return (
     <section id="articles" className={$.container}>
-      <h2>Articles</h2>
+      <h2 className="numbered-heading">Articles</h2>
       <ul>
         {config.articles.map(({ title, description, cover, link }, i) => (
           <li key={i}></li>
