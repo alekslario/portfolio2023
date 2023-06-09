@@ -13,9 +13,9 @@ const Featured = () => (
       {config.featured.map(({ external, title, tech, github, cover, cta, description }, i) => {
         return (
           <motion.li
-            initial={{ opacity: 0, top: 120 }}
+            initial={{ opacity: 0, top: 20 }}
             whileInView={{ opacity: 1, top: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
             key={i}
             className={$.project}
           >
