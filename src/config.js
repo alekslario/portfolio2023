@@ -92,6 +92,21 @@ export default {
       external: 'https://www.npmjs.com/package/gatsby-plugin-google-fonts-with-attributes',
       cta: '',
     },
+    {
+      title: 'SnippetLib',
+      description: 'Simple chrome extension for saving snippets of text.',
+      tech: ['JS, TypeScript'],
+      github: 'https://github.com/alekslario/SnippetLib',
+      external: 'https://chrome.google.com/webstore/detail/your-snippet-library/melfcpcelidmppepfchcmigpenodlkgb',
+      cta: '',
+    },
+    {
+      title: 'ChatGpt prompt prefixer',
+      description: 'When typing the same prompt over and over again gets tedious. A chrome extension.',
+      tech: ['JS, CSS'],
+      github: 'https://github.com/alekslario/ChatGpt-Prompt-Prefixer-extension',
+      cta: '',
+    },
   ],
   articles: [
     {
@@ -100,12 +115,6 @@ export default {
       cover: '/../public/images/1article.png',
       external:
         'https://medium.com/@aleksandlario/the-art-of-ai-using-chatgpt-and-midjourney-to-generate-inspiring-visuals-caa91012c8db',
-    },
-    {
-      title: 'How to Automate Midjourney Image Generation with Puppeteer.',
-      description: 'Web scraping Discord.',
-      cover: '/../public/images/2article.png',
-      external: 'https://medium.com/@aleksandlario/how-to-automate-midjourney-image-generation-with-puppeteer-6aea1b366c75',
     },
     {
       title: 'How to Automate Midjourney Image Generation with Puppeteer.',

@@ -1,5 +1,6 @@
 import React from 'react';
 import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
+import { motion } from 'framer-motion';
 import $ from './Featured.module.scss';
 import Image from 'next/image';
 import config from '../../config';
@@ -11,7 +12,13 @@ const Featured = () => (
     <ul className={$.projects}>
       {config.featured.map(({ external, title, tech, github, cover, cta, description }, i) => {
         return (
-          <li key={i} className={$.project}>
+          <motion.li
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            key={i}
+            className={$.project}
+          >
             <div className={$.projectContent}>
               <div>
                 <p className={$.projectOverline}>Featured Project</p>
@@ -51,7 +58,7 @@ const Featured = () => (
                 <Image src={cover} alt={title} fill={true} />
               </a>
             </div>
-          </li>
+          </motion.li>
         );
       })}
     </ul>
