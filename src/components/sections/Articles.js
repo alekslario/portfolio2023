@@ -16,9 +16,9 @@ const Articles = () => {
             <div className={$.content}>
               <h4>{title}</h4>
               <p>{description}</p>
-              {/* <a href={external} aria-label="External Link" className="external">
+              <a href={external} aria-label="External Link" className={$.link}>
                 <IconExternalLink />
-              </a> */}
+              </a>
             </div>
           </li>
         ))}
