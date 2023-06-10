@@ -17,9 +17,16 @@ const Hero = () => {
     show: { opacity: 1, transform: 'translateY(0px)' },
   };
   useEffect(() => {
-    const e = document.querySelector('#namee');
-    const annotation = annotate(e, { type: 'highlight' });
-    annotation.show();
+    annotate(document.querySelector('#highlight1'), {
+      type: 'highlight',
+      color: '#1f69db',
+      iterations: 1,
+    }).show();
+    annotate(document.querySelector('#highlight2'), {
+      type: 'circle',
+      color: '#1f69db',
+      iterations: 1,
+    }).show();
   }, []);
   return (
     <motion.section variants={container} initial="hidden" animate="show" className={$.container}>
@@ -28,8 +35,9 @@ const Hero = () => {
       <motion.h2 variants={listItem}>Aleksandrs Larionovs.</motion.h2>
       <motion.h3 variants={listItem}>I build things for web and beyond.</motion.h3>
       <motion.p variants={listItem}>
-        I am a <span id="namee">software engineer</span> specializing in building fast, responsive web apps. Currently, I am
-        a student at the University of London.
+        I am a <span id="highlight1">software engineer</span> specializing in building fast, responsive web apps. Currently,
+        I am a student at the University of London and looking for a new role as a developer.{' '}
+        <span id="highlight2">Hire me?</span>
       </motion.p>
       <motion.a
         variants={listItem}
