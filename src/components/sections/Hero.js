@@ -1,6 +1,7 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { annotate } from 'rough-notation';
 import $ from './Hero.module.scss';
 const Hero = () => {
   const container = {
@@ -15,7 +16,11 @@ const Hero = () => {
     hidden: { opacity: 0, transform: 'translateY(20px)' },
     show: { opacity: 1, transform: 'translateY(0px)' },
   };
-
+  useEffect(() => {
+    const e = document.querySelector('#namee');
+    const annotation = annotate(e, { type: 'highlight' });
+    annotation.show();
+  }, []);
   return (
     <motion.section variants={container} initial="hidden" animate="show" className={$.container}>
       <div className={$.gradient}></div>
@@ -23,8 +28,8 @@ const Hero = () => {
       <motion.h2 variants={listItem}>Aleksandrs Larionovs.</motion.h2>
       <motion.h3 variants={listItem}>I build things for web and beyond.</motion.h3>
       <motion.p variants={listItem}>
-        I am a software engineer specializing in building fast, responsive web apps. Currently, I am a student at the
-        University of London.
+        I am a <span id="namee">software engineer</span> specializing in building fast, responsive web apps. Currently, I am
+        a student at the University of London.
       </motion.p>
       <motion.a
         variants={listItem}
