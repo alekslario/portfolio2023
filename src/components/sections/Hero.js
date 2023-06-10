@@ -18,6 +18,7 @@ const Hero = () => {
 
   return (
     <motion.section variants={container} initial="hidden" animate="show" className={$.container}>
+      <div className={$.gradient}></div>
       <motion.h1 variants={listItem}>Hi, my name is</motion.h1>
       <motion.h2 variants={listItem}>Aleksandrs Larionovs.</motion.h2>
       <motion.h3 variants={listItem}>I build things for web and beyond.</motion.h3>

@@ -44,3 +44,13 @@
     margin-top: 50px;
   }
 }
+
+.gradient {
+  position: absolute;
+  pointer-events: none;
+  top: 100px;
+  bottom: 100px;
+  left: 0;
+  right: -100%;
+  background: radial-gradient(#183664, var(--navy) 45%);
+}
