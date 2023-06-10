@@ -1,12 +1,25 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import smoothScroll from '../util/smoothScroll';
+import { motion } from 'framer-motion';
 import useScrollDirection from '../hooks/useScrollDirection';
 import { IconHexagonLetterA } from '@tabler/icons-react';
 import Menu from './Menu';
 import config from '../config';
 import $ from './Navbar.module.scss';
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
+const listItem = {
+  hidden: { opacity: 0, transform: 'translateY(20px)' },
+  show: { opacity: 1, transform: 'translateY(0px)' },
+};
 const Navbar = () => {
   const scrollDirection = useScrollDirection();
   const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -22,28 +35,35 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header
+    <motion.header
       className={`${$.container} ${scrolledToTop ? '' : scrollDirection === 'down' ? $.scrollingDown : $.scrollingUp}`}
+      variants={container}
     >
-      <nav>
-        <a href="/" className={$.logoContainer}>
+      <motion.nav variants={container}>
+        <motion.a
+          href="/"
+          className={$.logoContainer}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { delay: 1 } }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <IconHexagonLetterA />
-        </a>
+        </motion.a>
         <div className={$.links}>
-          <ol>
+          <motion.ol variants={container}>
             {config.navLinks.map(({ name, url }) => (
-              <li>
+              <motion.li variants={listItem}>
                 <a href={url}>{name}</a>
-              </li>
+              </motion.li>
             ))}
-          </ol>
+          </motion.ol>
           <a className={$.resume} href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             Resume
           </a>
         </div>
         <Menu />
-      </nav>
-    </header>
+      </motion.nav>
+    </motion.header>
   );
 };
 export default Navbar;
