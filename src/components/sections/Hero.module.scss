@@ -1,5 +1,6 @@
 @import '../../styles/mixins.scss';
 .container {
+  position: relative;
   @extend .flexCenter;
   flex-direction: column;
   align-items: flex-start;
@@ -46,11 +47,11 @@
 }
 
 .gradient {
+  z-index: -1;
   position: absolute;
   pointer-events: none;
-  top: 100px;
-  bottom: 100px;
-  left: 0;
-  right: -100%;
-  background: radial-gradient(#183664, var(--navy) 45%);
+  height: 50%;
+  width: 100%;
+  // left: 110%;
+  background: radial-gradient(#183664, var(--navy) 55%);
 }
