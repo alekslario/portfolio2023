@@ -1,10 +1,12 @@
 import React from 'react';
 import $ from './About.module.scss';
 import Image from 'next/image';
+import config from '../../config';
+import { motion } from 'framer-motion';
 const About = () => {
   const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Java', , 'Bash', 'Node.js', 'Python', 'Terraform', 'Docker'];
   return (
-    <section id="about" className={$.container}>
+    <motion.section {...config.basicAnimation} id="about" className={$.container}>
       <h2 className="numbered-heading">About Me</h2>
       <div>
         <div>
@@ -31,7 +33,7 @@ const About = () => {
           <Image src="/../public/me.png" alt="Headshot" fill={true} />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

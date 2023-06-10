@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 import config from '../config';
 import useOnClickOutside from '../hooks/useOnClickOutside';
 import $ from './Menu.module.scss';
@@ -33,11 +34,19 @@ const Menu = () => {
   return (
     <menu className={$.container}>
       <div ref={wrapperRef}>
-        <button onClick={toggleMenu} className={`${menuOpen ? $.menuOpen : ''}`} ref={buttonRef} aria-label="Menu">
+        <motion.button
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, transition: { delay: 1 } }}
+          viewport={{ once: true, amount: 0.5 }}
+          onClick={toggleMenu}
+          className={`${menuOpen ? $.menuOpen : ''}`}
+          ref={buttonRef}
+          aria-label="Menu"
+        >
           <div className={$.hamBox}>
             <div className={$.hamBoxInner} />
           </div>
-        </button>
+        </motion.button>
         <div className={`${$.sidebar} ${menuOpen ? $.sidebarOpen : ''}`}>
           <nav>
             <ol>

@@ -2,14 +2,17 @@ import React from 'react';
 import $ from './Articles.module.scss';
 import { IconExternalLink } from '@tabler/icons-react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import config from '../../config';
 const Articles = () => {
   return (
     <section id="articles" className={$.container}>
-      <h2 className="numbered-heading">Recent Articles</h2>
+      <motion.h2 {...config.basicAnimation} className="numbered-heading">
+        Recent Articles
+      </motion.h2>
       <ul>
         {config.articles.map(({ title, description, cover, external }, i) => (
-          <li key={i}>
+          <motion.li {...config.basicAnimation} key={i}>
             <div className={$.imageWrapper}>
               <Image src={cover} alt={title} fill={true} />
             </div>
@@ -24,7 +27,7 @@ const Articles = () => {
                 <IconExternalLink />
               </a>
             </div>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </section>

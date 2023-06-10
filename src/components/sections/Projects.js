@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { IconBrandGithub, IconExternalLink, IconFolder } from '@tabler/icons-react';
 import $ from './Projects.module.scss';
+import { motion } from 'framer-motion';
 import config from '../../config';
-
 const Projects = () => {
   const [showMore, setShowMore] = useState(false);
   const projects = showMore ? config.projects.slice(0, 6) : config.projects.slice(0, 3);
   return (
     <section className={$.container}>
-      <h2>Other Noteworthy Projects</h2>
+      <motion.h2 {...config.basicAnimation}>Other Noteworthy Projects</motion.h2>
       <ul className={$.projectsGrid}>
         {projects.map(({ description, title, tech, external, github }, i) => (
-          <li className={$.project}>
+          <motion.li {...config.basicAnimation} className={$.project}>
             <div className={$.projectInner}>
               <header>
                 <div className={$.projectTop}>
@@ -51,7 +51,7 @@ const Projects = () => {
                 )}
               </footer>
             </div>
-          </li>
+          </motion.li>
         ))}
       </ul>
 

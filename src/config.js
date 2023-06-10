@@ -1,7 +1,11 @@
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 export default {
   email: 'alex@aleksandrslarionovs.com',
-
+  basicAnimation: {
+    initial: { opacity: 0, transform: 'translateY(20px)' },
+    whileInView: { opacity: 1, transform: 'translateY(0px)' },
+    viewport: { once: true, amount: 0.5 },
+  },
   socialMedia: [
     {
       name: 'GitHub',

@@ -6,20 +6,7 @@ import { IconHexagonLetterA } from '@tabler/icons-react';
 import Menu from './Menu';
 import config from '../config';
 import $ from './Navbar.module.scss';
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
 
-const listItem = {
-  hidden: { opacity: 0, transform: 'translateY(20px)' },
-  show: { opacity: 1, transform: 'translateY(0px)' },
-};
 const Navbar = () => {
   const scrollDirection = useScrollDirection();
   const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -35,11 +22,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.header
+    <header
       className={`${$.container} ${scrolledToTop ? '' : scrollDirection === 'down' ? $.scrollingDown : $.scrollingUp}`}
-      variants={container}
     >
-      <motion.nav variants={container}>
+      <nav>
         <motion.a
           href="/"
           className={$.logoContainer}
@@ -50,20 +36,28 @@ const Navbar = () => {
           <IconHexagonLetterA />
         </motion.a>
         <div className={$.links}>
-          <motion.ol variants={container}>
+          <ol>
             {config.navLinks.map(({ name, url }) => (
-              <motion.li variants={listItem}>
+              <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.5 }}>
                 <a href={url}>{name}</a>
               </motion.li>
             ))}
-          </motion.ol>
-          <a className={$.resume} href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          </ol>
+          <motion.a
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { delay: 1 } }}
+            viewport={{ once: true, amount: 0.5 }}
+            className={$.resume}
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Resume
-          </a>
+          </motion.a>
         </div>
         <Menu />
-      </motion.nav>
-    </motion.header>
+      </nav>
+    </header>
   );
 };
 export default Navbar;

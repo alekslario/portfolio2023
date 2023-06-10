@@ -7,18 +7,14 @@ import config from '../../config';
 
 const Featured = () => (
   <section id="projects" className={$.container}>
-    <h2 className="numbered-heading">Some Things I’ve Built</h2>
+    <motion.h2 {...config.basicAnimation} className="numbered-heading">
+      Some Things I’ve Built
+    </motion.h2>
 
     <ul className={$.projects}>
       {config.featured.map(({ external, title, tech, github, cover, cta, description }, i) => {
         return (
-          <motion.li
-            initial={{ opacity: 0, top: 20 }}
-            whileInView={{ opacity: 1, top: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            key={i}
-            className={$.project}
-          >
+          <motion.li {...config.basicAnimation} key={i} className={$.project}>
             <div className={$.projectContent}>
               <div>
                 <p className={$.projectOverline}>Featured Project</p>
