@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { annotate } from 'rough-notation';
+import { annotate, annotationGroup } from 'rough-notation';
 import $ from './Hero.module.scss';
 const Hero = () => {
   const container = {
@@ -17,16 +17,19 @@ const Hero = () => {
     show: { opacity: 1, transform: 'translateY(0px)' },
   };
   useEffect(() => {
-    annotate(document.querySelector('#highlight1'), {
+    const h1 = annotate(document.querySelector('#highlight1'), {
       type: 'highlight',
       color: '#1f69db',
       iterations: 1,
-    }).show();
-    annotate(document.querySelector('#highlight2'), {
+    });
+    const h2 = annotate(document.querySelector('#highlight2'), {
       type: 'circle',
       color: '#1f69db',
-      iterations: 1,
-    }).show();
+
+      padding: 10,
+    });
+    const ag = annotationGroup([h1, h2]);
+    ag.show();
   }, []);
   return (
     <motion.section variants={container} initial="hidden" animate="show" className={$.container}>
