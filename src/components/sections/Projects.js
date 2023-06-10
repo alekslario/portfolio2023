@@ -3,6 +3,7 @@ import { IconBrandGithub, IconExternalLink, IconFolder } from '@tabler/icons-rea
 import $ from './Projects.module.scss';
 import { motion } from 'framer-motion';
 import config from '../../config';
+
 const Projects = () => {
   const [showMore, setShowMore] = useState(false);
   const projects = showMore ? config.projects.slice(0, 6) : config.projects.slice(0, 3);

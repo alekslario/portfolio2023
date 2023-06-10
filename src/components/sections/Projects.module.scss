@@ -41,15 +41,6 @@
   cursor: default;
   transition: var(--transition);
 
-  @media (prefers-reduced-motion: no-preference) {
-    &:hover,
-    &:focus-within {
-      .project-inner {
-        transform: translateY(-7px);
-      }
-    }
-  }
-
   a {
     position: relative;
     z-index: 1;
@@ -67,6 +58,10 @@
     background-color: var(--light-navy);
     transition: var(--transition);
     overflow: auto;
+    &:focus-within,
+    &:hover {
+      transform: translateY(-7px);
+    }
   }
 
   .projectTop {
