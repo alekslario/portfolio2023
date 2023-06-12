@@ -20,12 +20,13 @@ const Hero = () => {
   useEffect(() => {
     const h1 = annotate(document.querySelector('#highlight1'), {
       type: 'highlight',
-      color: '#1f69db',
+      color: '#152588',
       iterations: 1,
+      animationDuration: 2000,
     });
     const h2 = annotate(document.querySelector('#highlight2'), {
       type: 'circle',
-      color: '#1f69db',
+      color: '#152588',
 
       padding: 10,
     });
@@ -39,7 +40,13 @@ const Hero = () => {
     <motion.section variants={container} initial="hidden" animate="show" className={$.container}>
       <div className={$.gradient}></div>
 
-      <canvas id="gradient-canvas" data-transition-in />
+      <motion.canvas
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 4 } }}
+        viewport={{ once: true, amount: 0.5 }}
+        id="gradient-canvas"
+        data-transition-in
+      />
       <motion.h1 variants={listItem}>Hi, my name is</motion.h1>
       <motion.h2 variants={listItem}>Aleksandrs Larionovs.</motion.h2>
       <motion.h3 variants={listItem}>I build things for web and beyond.</motion.h3>
