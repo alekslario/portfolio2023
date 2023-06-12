@@ -2,3 +2,27 @@
 @import './_variables';
 @import './_reset';
 @import './_mixins';
+
+#gradient-canvas,
+#gradient-canvas2,
+#gradient-canvas3 {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+
+  //   good combo
+  --gradient-color-1: #90afddd8;
+  --gradient-color-2: var(--navy);
+  --gradient-color-3: var(--navy);
+  --gradient-color-4: #141f2ef6;
+
+  //
+  //   --gradient-color-1: #0a192f;
+  //   --gradient-color-2: var(--navy);
+  //   --gradient-color-3: var(--navy);
+  //   --gradient-color-4: #0a192f;
+}

@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { annotate, annotationGroup } from 'rough-notation';
+import { Gradient } from '../../scripts/gradient.js';
 import $ from './Hero.module.scss';
 const Hero = () => {
   const container = {
@@ -30,10 +31,15 @@ const Hero = () => {
     });
     const ag = annotationGroup([h1, h2]);
     ag.show();
+
+    const gradient = new Gradient();
+    gradient.initGradient('#gradient-canvas');
   }, []);
   return (
     <motion.section variants={container} initial="hidden" animate="show" className={$.container}>
       <div className={$.gradient}></div>
+
+      <canvas id="gradient-canvas" data-transition-in />
       <motion.h1 variants={listItem}>Hi, my name is</motion.h1>
       <motion.h2 variants={listItem}>Aleksandrs Larionovs.</motion.h2>
       <motion.h3 variants={listItem}>I build things for web and beyond.</motion.h3>
