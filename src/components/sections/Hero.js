@@ -20,17 +20,23 @@ const Hero = () => {
   useEffect(() => {
     const h1 = annotate(document.querySelector('#highlight1'), {
       type: 'highlight',
-      color: 'rgba(82,0,255,.9)',
+      color: 'rgba(255, 242, 241,.8)',
       iterations: 1,
-      animationDuration: 2000,
+      animationDuration: 1000,
     });
     const h2 = annotate(document.querySelector('#highlight2'), {
+      type: 'highlight',
+      color: 'rgba(252, 252, 98,.8)',
+      iterations: 1,
+      animationDuration: 1000,
+    });
+    const h3 = annotate(document.querySelector('#highlight3'), {
       type: 'circle',
-      color: 'rgba(82,0,255,.9)',
+      color: 'rgba(160, 155, 231,.4)',
 
       padding: 10,
     });
-    const ag = annotationGroup([h1, h2]);
+    const ag = annotationGroup([h1, h2, h3]);
     ag.show();
 
     const gradient = new Gradient();
@@ -51,9 +57,9 @@ const Hero = () => {
       <motion.h2 variants={listItem}>Aleksandrs Larionovs.</motion.h2>
       <motion.h3 variants={listItem}>I build things for web and beyond.</motion.h3>
       <motion.p variants={listItem}>
-        I am a software engineer specializing in building <span id="highlight1">fast</span>,
-        <span id="highlight1">responsive</span> web apps. Currently, I am a student at the University of London and looking
-        for a new role as a developer. <span id="highlight2">Hire me?</span>
+        I am a software engineer specializing in building <span id="highlight1">fast</span> and{' '}
+        <span id="highlight2">responsive</span> web apps. Currently, I am a student at the University of London and looking
+        for a new role as a developer. <span id="highlight3">Hire me?</span>
       </motion.p>
       <motion.a
         variants={listItem}

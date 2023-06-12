@@ -42,6 +42,10 @@
 }
 
 .imageWrapper {
+  img {
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1) brightness(90%);
+  }
   aspect-ratio: 1 / 1;
   position: relative;
   max-width: 300px;
@@ -67,7 +71,7 @@
       transform: translate(8px, 8px);
     }
 
-    .img {
+    img {
       filter: none;
       mix-blend-mode: normal;
     }
