@@ -20,13 +20,13 @@ const Hero = () => {
   useEffect(() => {
     const h1 = annotate(document.querySelector('#highlight1'), {
       type: 'highlight',
-      color: '#152588',
+      color: 'rgba(82,0,255,.9)',
       iterations: 1,
       animationDuration: 2000,
     });
     const h2 = annotate(document.querySelector('#highlight2'), {
       type: 'circle',
-      color: '#152588',
+      color: 'rgba(82,0,255,.9)',
 
       padding: 10,
     });
