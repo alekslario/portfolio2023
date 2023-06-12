@@ -71,7 +71,7 @@ export default {
     {
       title: 'Yet another algorithm visualizer.',
       description:
-        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and an abuse of pseudo-elements.',
+        'This is my take on algorithm visualization. No animation libraries were used, just pure CSS and abuse of pseudo-elements.',
       cover: '/../public/images/algofind.png',
       tech: ['React', 'Tailwind', 'Styled Components'],
       github: 'https://github.com/alekslario/algofind',
