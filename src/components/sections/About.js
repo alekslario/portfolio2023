@@ -30,7 +30,7 @@ const About = () => {
           <ul className="skills-list">{skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}</ul>
         </div>
         <div className={$.imageWrapper}>
-          <Image src="/../public/me.xy.png" alt="Headshot" fill={true} />
+          <Image src="/../public/me.x.png" alt="Headshot" fill={true} />
         </div>
       </div>
     </motion.section>
