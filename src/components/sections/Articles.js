@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import $ from './Articles.module.scss';
 import { IconExternalLink } from '@tabler/icons-react';
-import { Gradient } from '../../scripts/gradient.js';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import config from '../../config';
 const Articles = () => {
-  useEffect(() => {
-    config.articles.forEach((_, i) => {
-      const gradient = new Gradient();
-      gradient.initGradient(`#gradient-canvas${i + 2}`);
-    });
-    // gradient.initGradient('#gradient-canvas2');
-  }, []);
   return (
     <section id="articles" className={$.container}>
       <motion.h2 {...config.basicAnimation} className="numbered-heading">
@@ -21,7 +13,6 @@ const Articles = () => {
       <ul>
         {config.articles.map(({ title, description, cover, external }, i) => (
           <motion.li {...config.basicAnimation} key={i}>
-            <canvas id={`gradient-canvas${i + 2}`} data-transition-in />
             <div className={$.imageWrapper}>
               <Image src={cover} alt={title} fill={true} />
             </div>

@@ -51,9 +51,9 @@ const Hero = () => {
       <motion.h2 variants={listItem}>Aleksandrs Larionovs.</motion.h2>
       <motion.h3 variants={listItem}>I build things for web and beyond.</motion.h3>
       <motion.p variants={listItem}>
-        I am a <span id="highlight1">software engineer</span> specializing in building fast, responsive web apps. Currently,
-        I am a student at the University of London and looking for a new role as a developer.{' '}
-        <span id="highlight2">Hire me?</span>
+        I am a software engineer specializing in building <span id="highlight1">fast</span>,
+        <span id="highlight1">responsive</span> web apps. Currently, I am a student at the University of London and looking
+        for a new role as a developer. <span id="highlight2">Hire me?</span>
       </motion.p>
       <motion.a
         variants={listItem}
