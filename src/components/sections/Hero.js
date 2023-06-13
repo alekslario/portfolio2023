@@ -18,26 +18,26 @@ const Hero = () => {
     show: { opacity: 1, transform: 'translateY(0px)' },
   };
   useEffect(() => {
-    const h1 = annotate(document.querySelector('#highlight1'), {
-      type: 'highlight',
-      color: 'rgba(255, 242, 241,.8)',
-      iterations: 1,
-      animationDuration: 1000,
-    });
-    const h2 = annotate(document.querySelector('#highlight2'), {
-      type: 'highlight',
-      color: 'rgba(252, 252, 98,.8)',
-      iterations: 1,
-      animationDuration: 1000,
-    });
-    const h3 = annotate(document.querySelector('#highlight3'), {
-      type: 'circle',
-      color: 'rgba(160, 155, 231,.4)',
+    // const h1 = annotate(document.querySelector('#highlight1'), {
+    //   type: 'highlight',
+    //   color: 'rgba(255, 242, 241,.8)',
+    //   iterations: 1,
+    //   animationDuration: 1000,
+    // });
+    // const h2 = annotate(document.querySelector('#highlight2'), {
+    //   type: 'highlight',
+    //   color: 'rgba(252, 252, 98,.8)',
+    //   iterations: 1,
+    //   animationDuration: 1000,
+    // });
+    // const h3 = annotate(document.querySelector('#highlight3'), {
+    //   type: 'circle',
+    //   color: 'rgba(160, 155, 231,.4)',
 
-      padding: 10,
-    });
-    const ag = annotationGroup([h1, h2, h3]);
-    ag.show();
+    //   padding: 10,
+    // });
+    // const ag = annotationGroup([h1, h2, h3]);
+    // ag.show();
 
     const gradient = new Gradient();
     gradient.initGradient('#gradient-canvas');

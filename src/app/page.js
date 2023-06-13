@@ -15,7 +15,7 @@ import Email from '@/components/Email';
 import Social from '@/components/Social';
 import React from 'react';
 
-export default () => {
+const Main = () => {
   const [state, setState] = useState('ABOUT');
   useEffect(() => {
     const handleScroll = throttle(() => {
@@ -43,3 +43,4 @@ export default () => {
     </Layout>
   );
 };
+export default Main;

@@ -12,7 +12,7 @@ const Projects = () => {
       <motion.h2 {...config.basicAnimation}>Other Noteworthy Projects</motion.h2>
       <ul className={$.projectsGrid}>
         {projects.map(({ description, title, tech, external, github }, i) => (
-          <motion.li {...config.basicAnimation} className={$.project}>
+          <motion.li {...config.basicAnimation} className={$.project} key={i}>
             <div className={$.projectInner}>
               <header>
                 <div className={$.projectTop}>

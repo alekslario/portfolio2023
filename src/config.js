@@ -1,5 +1,5 @@
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
-export default {
+const Config = {
   email: 'alex@aleksandrslarionovs.com',
   basicAnimation: {
     initial: { opacity: 0, transform: 'translateY(20px)' },
@@ -128,3 +128,4 @@ export default {
     },
   ],
 };
+export default Config;

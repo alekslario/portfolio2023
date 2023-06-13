@@ -37,8 +37,13 @@ const Navbar = () => {
         </motion.a>
         <div className={$.links}>
           <ol>
-            {config.navLinks.map(({ name, url }) => (
-              <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.5 }}>
+            {config.navLinks.map(({ name, url }, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
                 <a href={url}>{name}</a>
               </motion.li>
             ))}

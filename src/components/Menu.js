@@ -50,8 +50,8 @@ const Menu = () => {
         <div className={`${$.sidebar} ${menuOpen ? $.sidebarOpen : ''}`}>
           <nav>
             <ol>
-              {config.navLinks.map(({ name, url }) => (
-                <li>
+              {config.navLinks.map(({ name, url }, i) => (
+                <li key={i}>
                   <a href={url}>{name}</a>
                 </li>
               ))}
