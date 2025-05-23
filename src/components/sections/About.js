@@ -5,12 +5,12 @@ import config from "../../config";
 import { motion } from "framer-motion";
 const About = () => {
   const skills = [
-    "JavaScript (ES6+)",
+    "Ionic",
     "TypeScript",
     "React",
     "Java",
-    ,
-    "Bash",
+    "CloudFormation",
+    "PostgreSQL",
     "Node.js",
     "Python",
     "Terraform",
@@ -26,23 +26,8 @@ const About = () => {
       <div>
         <div>
           <p>
-            Hey! My name is Alex, and I love building cool stuff that lives on
-            the internet. It all started in 2017 when I decided to create an app
-            — there was no going back after that!
-          </p>
-
-          <p>
-            Fast-forward to today, and I’m studying Computer Science at the
-            University of London.
-          </p>
-
-          <p>
-            I also recently started writing articles. The most recent one covers
-            how to{" "}
-            <a href="https://medium.com/@aleksandlario/how-to-automate-midjourney-image-generation-with-puppeteer-6aea1b366c75">
-              automate
-            </a>{" "}
-            Midjourney image generation.
+            Hey! My name is Alex, I’m an ex-Amazon intern, and I love building
+            cool stuff that lives on the internet.
           </p>
 
           <p>Here are a few technologies I’ve been working with recently:</p>

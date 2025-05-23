@@ -1,9 +1,9 @@
-'use client';
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { annotate, annotationGroup } from 'rough-notation';
-import { Gradient } from '../../scripts/gradient.js';
-import $ from './Hero.module.scss';
+"use client";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import { annotate, annotationGroup } from "rough-notation";
+import { Gradient } from "../../scripts/gradient.js";
+import $ from "./Hero.module.scss";
 const Hero = () => {
   const container = {
     show: {
@@ -14,8 +14,8 @@ const Hero = () => {
   };
 
   const listItem = {
-    hidden: { opacity: 0, transform: 'translateY(20px)' },
-    show: { opacity: 1, transform: 'translateY(0px)' },
+    hidden: { opacity: 0, transform: "translateY(20px)" },
+    show: { opacity: 1, transform: "translateY(0px)" },
   };
   useEffect(() => {
     // const h1 = annotate(document.querySelector('#highlight1'), {
@@ -40,10 +40,15 @@ const Hero = () => {
     // ag.show();
 
     const gradient = new Gradient();
-    gradient.initGradient('#gradient-canvas');
+    gradient.initGradient("#gradient-canvas");
   }, []);
   return (
-    <motion.section variants={container} initial="hidden" animate="show" className={$.container}>
+    <motion.section
+      variants={container}
+      initial="hidden"
+      animate="show"
+      className={$.container}
+    >
       <div className={$.gradient}></div>
 
       <motion.canvas
@@ -55,11 +60,15 @@ const Hero = () => {
       />
       <motion.h1 variants={listItem}>Hi, my name is</motion.h1>
       <motion.h2 variants={listItem}>Aleksandrs Larionovs.</motion.h2>
-      <motion.h3 variants={listItem}>I build things for web and beyond.</motion.h3>
+      <motion.h3 variants={listItem}>
+        I build things for web and beyond.
+      </motion.h3>
       <motion.p variants={listItem}>
-        I am a software engineer specializing in building <span id="highlight1">fast</span> and{' '}
-        <span id="highlight2">responsive</span> web apps. Currently, I am a student at the University of London and looking
-        for a new role as a developer. <span id="highlight3">Hire me?</span>
+        I am a software engineer specializing in building{" "}
+        <span id="highlight1">fast</span> and{" "}
+        <span id="highlight2">responsive</span> web apps. Currently, I am a
+        student at Goldsmiths, University of London.{" "}
+        <span id="highlight3">Hire me?</span>
       </motion.p>
       <motion.a
         variants={listItem}

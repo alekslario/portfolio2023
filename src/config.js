@@ -42,6 +42,25 @@ const Config = {
   ],
   featured: [
     {
+      title: "ClearPattern",
+      description:
+        "<p>A skincare and nutrition app that helps identify acne triggers through diet and visual progress tracking.",
+      cover: dev_prefix + "images/clear-pattern.png",
+      tech: [
+        "ExpressJS",
+        "React",
+        "PostgreSQL",
+        "Docker",
+        "Terraform",
+        "Doppler",
+        "Ionic",
+        "Android",
+      ],
+      github: "",
+      external: "",
+      cta: "",
+    },
+    {
       title: "Remake of a Shopify theme.",
       description:
         "<p>This is a fully functional Shopify theme remake built with React and NodeJS backend that supports auth, email handling, stock control.</p> Contentful conveniently provides static content, enabling easy edits for non-coders. My aim was to ensure that the checkout process, in terms of appearance and flow, matches that of a standard Shopify store.",
